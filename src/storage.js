@@ -1,0 +1,3 @@
+import {STORAGE_KEY,emptyState,apply} from './calendar.js';
+export function load(){let raw=localStorage.getItem(STORAGE_KEY);if(!raw)return emptyState();try{let s=JSON.parse(raw);if(s.version!==1||!Array.isArray(s.reservations)||!Array.isArray(s.blocks))throw Error();return s}catch{throw Error('Os dados locais não puderam ser lidos. Faça um backup antes de limpar o navegador.')}}
+export async function api(action,args){const run=()=>{let {state,result}=apply(load(),action,args);if(action!=='records.list'){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch{throw Error('O navegador não permitiu salvar. Libere armazenamento ou faça um backup dos dados.')}}return result};return navigator.locks?navigator.locks.request('pms-refugio-storage',run):run()}
