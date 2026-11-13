@@ -1,46 +1,32 @@
-# PMS Refúgio · Bairro Papo — teste Airbnb e Booking
+# PMS Refugio - GitHub Pages
 
-Base: segundo arquivo enviado, `Pms+Refugio+Com+Sincronia (1).tar.gz`. O primeiro pacote não é a base deste código.
+## Subir em 2 minutos
+1. Crie repo no GitHub chamado `pms-refugio` (publico)
+2. Suba TODOS os arquivos desta pasta (index.html + *.webp)
+3. Settings > Pages > Branch: main > Folder: / (root) > Save
+4. Abra: https://SEU-USUARIO.github.io/pms-refugio/
 
-## O que funciona
-- Dashboard: ocupação, chegadas e saídas de hoje no horário de Brasília; valor das reservas do mês, sem comprovação de receita recebida.
-- 6 quartos demonstrativos: Vista Mar, Família e Econômico, com tarifas fictícias explicitamente marcadas.
-- Calendário de 14 dias, navegação, verde livre / vermelho ocupado / amarelo limpeza.
-- Reservas manuais, validação de datas/diária/e-mail, prevenção de sobreposição e atualização de situação. Check-in marca Hospedado.
-- Cinco exemplos sob ação explícita, sem injetar dados falsos automaticamente.
-- Persistência em localStorage somente neste navegador. Recarregar preserva dados, salvo navegação privada, limpeza de armazenamento ou bloqueio do navegador. NÃO sincroniza celular e computador.
-- Importação manual iCal por quarto/canal. Leitura de link HTTPS oficial quando o canal permite CORS; alternativa por conteúdo .ics. URLs só ficam na memória da página e não são gravadas no repositório nem no localStorage.
-- Reimportação substitui os bloqueios daquele quarto e canal, após confirmação; reconcilia eventos movidos/removidos/cancelados. Erros preservam o calendário anterior. Calendários de dia inteiro, UID obrigatório; recorrências e eventos com hora são rejeitados em vez de liberar datas por engano.
-- “Sincronizar as duas agora” tenta importar os dois lados e apresenta resultado individual. Não altera horários de sucesso em falhas.
-- Exportação por quarto com UID estável, sem nome ou e-mail do hóspede.
-
-## Limites importantes
-GitHub Pages é hospedagem estática. Não há servidor, banco compartilhado, agendamento automático, feed iCal hospedado, segredo de API ou integração atual com Sabrina/Bairro Papo. Exportar baixa um arquivo: isso NÃO cria um URL assinável para Airbnb/Booking e NÃO atualiza essas plataformas. Os calendários externos normalmente exigem URL para assinatura; essa etapa precisa de backend futuro. iCal só transporta datas e pode ter atraso; não transfere tarifas e não elimina overbooking.
-
-Não se trata ainda de um channel manager ou motor de reservas de produção. Use dados fictícios. O futuro backend deverá autenticar usuários, compartilhar reservas, manter feeds privados, consultar periodicamente os canais, reconciliar bloqueios e bloquear disponibilidade de forma transacional antes de confirmação pela Sabrina. A API da assistente deve aplicar autorização por pousada e confirmação humana enquanto a disponibilidade não for confiável.
-
-## GitHub Pages
-Os arquivos prontos `index.html`, `app.js`, `style.css` e `.nojekyll` ficam na raiz. Não precisam de build no GitHub. Em Settings → Pages: Deploy from a branch → main → / (root). Links relativos funcionam no subdiretório `/pms-refugio/`.
-
-A página pode ser pública sem expor as reservas locais de outros navegadores: o código é público, seus registros ficam apenas neste navegador. Ainda assim use dados fictícios nesta demonstração. Nenhum link iCal real ou credencial está incluído.
-
-## Desenvolvimento
-Requer Node.js 22+.
+## Comandos
+```bash
+git init
+git add .
+git commit -m "PMS Refugio - versao oficial"
+git branch -M main
+git remote add origin https://github.com/SEU-USUARIO/pms-refugio.git
+git push -u origin main
+# para atualizar depois:
+# git add . && git commit -m "atualizacao" && git push
 ```
-npm ci
-npm test
-npm run build
-```
-Para testar os arquivos de publicação:
-```
-python -m http.server 4187
-```
-Abra http://127.0.0.1:4187. Evite abrir via file://. O build restaura o HTML de entrada de scripts/index.template.html e gera os três arquivos na raiz para Pages.
 
-## Verificação realizada
-Cinco testes automatizados: datas/preços, conflito/cancelamento/idempotência, iCal inválido, reconciliação entre canais e exportação privada. Teste Chromium em desktop e viewport móvel 390px: cinco exemplos, nova reserva, persistência após recarga, importação e download iCal, sem erro de JS e sem overflow horizontal da página. Os calendários possuem rolagem horizontal própria. Isso não equivale a teste em dois aparelhos físicos nem a sincronização real de contas Airbnb/Booking.
+## OBSERVACOES - LEIA ANTES DE TESTAR
+1. GitHub Pages e ESTATICO: o site abre 100% (Hero Carrossel, calendario PMS, Bia lateral, calculadora, criador de sites).
+2. Nao funciona no GitHub Pages: salvar no banco do app. Aqui salva no navegador (localStorage) para teste. Para producao final, use versao com backend.
+3. NUNCA coloque chave de API real (Gemini/Groq/Mercado Pago) dentro do index.html. Chave no codigo = todo mundo ve. Use o campo dentro do site, que salva so no navegador.
+4. Pix real: use sua chave Pix do banco + link do Mercado Pago (R$ 3.990 em 12x). PMS recorrente: links de assinatura Mercado Pago (79/149/249).
+5. Teste no celular e no computador. Se o carrossel nao trocar, limpe cache Ctrl+Shift+R.
+6. Se as imagens nao aparecerem, confira que subiu os arquivos .webp junto com index.html, na mesma pasta.
 
-## GitHub
-Código enviado para https://github.com/Comandante22/pms-refugio, branch main. A criação do repositório foi feita pelo agente do proprietário. Esta integração permitiu o envio, mas recusou ativar o GitHub Pages com HTTP 403 (Resource not accessible by integration).
-
-Falta habilitar Settings → Pages → Deploy from a branch → main → / (root). O endereço esperado é https://comandante22.github.io/pms-refugio/; ele só deve ser considerado publicado após verificar o deploy e abrir a página. Os testes de navegador descritos acima foram feitos na cópia local compilada, ainda não na publicação do Pages.
+## Modelo oficial travado
+- Site: R$ 3.990 no Pix ou 12x de R$ 399 no Cartao. Paga 1 vez, e seu.
+- PMS: SOMENTE Cartao recorrente. Basico 79, Com Bia 149, Completo 249.
+- Sem Vrbo. So Airbnb + Booking + Site Direto. Sem comissao.

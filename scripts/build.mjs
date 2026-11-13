@@ -1,2 +1,0 @@
-import fs from 'node:fs/promises';import {execFileSync} from 'node:child_process';
-await fs.copyFile('scripts/index.template.html','index.html');execFileSync(process.execPath,['node_modules/vite/bin/vite.js','build'],{stdio:'inherit'});for(let name of ['index.html','app.js','style.css'])await fs.copyFile('dist/'+name,name);await fs.writeFile('dist/.nojekyll','');await fs.writeFile('.nojekyll','');

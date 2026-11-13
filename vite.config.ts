@@ -1,1 +1,0 @@
-import {defineConfig} from 'vite';import react from '@vitejs/plugin-react';export default defineConfig({base:'./',plugins:[react()],build:{outDir:'dist',assetsDir:'assets',rollupOptions:{output:{entryFileNames:'app.js',assetFileNames:a=>a.name?.endsWith('.css')?'style.css':'assets/[name]-[hash][extname]'}}}});
