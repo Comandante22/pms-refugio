@@ -288,8 +288,8 @@ export default function App(){
 
               <div className="mt-4 bg-[#0a1a11] border border-[var(--line)] rounded-xl p-4">
                 <p className="text-[11px] tracking-[0.14em] font-bold text-[#ffb3b6]">AJUDA PARA EXPORTAR O CALENDÁRIO</p>
-                <a href={CALENDAR_HELP_URL} target="_blank" rel="noopener" className="mt-2 inline-flex items-center gap-1.5 font-bold text-white underline underline-offset-2 decoration-[#ff5a5f] hover:text-[#ffd1d3]">Export your property’s reservation calendar <ExternalLink size={15} className="shrink-0" /></a>
-                <p className="text-xs text-[var(--muted)] mt-1">Abre a página de ajuda sobre exportar o calendário de reservas.</p>
+                <a href={CALENDAR_HELP_URL} target="_blank" rel="noopener" className="mt-2 inline-flex items-center gap-1.5 font-bold text-white underline underline-offset-2 decoration-[#ff5a5f] hover:text-[#ffd1d3]">Como exportar o calendário do Airbnb <ExternalLink size={15} className="shrink-0" /></a>
+                <p className="text-xs text-[var(--muted)] mt-1">Abre a ajuda do Airbnb sobre calendários externos.</p>
               </div>
 
               <div className="mt-4 bg-[#0a1a11] border border-[#ff5a5f] rounded-xl p-4">
