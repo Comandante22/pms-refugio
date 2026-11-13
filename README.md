@@ -41,4 +41,6 @@ Abra http://127.0.0.1:4187. Evite abrir via file://. O build restaura o HTML de 
 Cinco testes automatizados: datas/preços, conflito/cancelamento/idempotência, iCal inválido, reconciliação entre canais e exportação privada. Teste Chromium em desktop e viewport móvel 390px: cinco exemplos, nova reserva, persistência após recarga, importação e download iCal, sem erro de JS e sem overflow horizontal da página. Os calendários possuem rolagem horizontal própria. Isso não equivale a teste em dois aparelhos físicos nem a sincronização real de contas Airbnb/Booking.
 
 ## GitHub
-A criação automática de repositório foi recusada pela integração (`Resource not accessible by integration`). Os arquivos estão preparados; o upload e ativação de Pages dependem de um repositório com acesso de escrita liberado. Não confundir o link provisório de teste com um GitHub Pages já publicado.
+Código enviado para https://github.com/Comandante22/pms-refugio, branch main. A criação do repositório foi feita pelo agente do proprietário. Esta integração permitiu o envio, mas recusou ativar o GitHub Pages com HTTP 403 (Resource not accessible by integration).
+
+Falta habilitar Settings → Pages → Deploy from a branch → main → / (root). O endereço esperado é https://comandante22.github.io/pms-refugio/; ele só deve ser considerado publicado após verificar o deploy e abrir a página. Os testes de navegador descritos acima foram feitos na cópia local compilada, ainda não na publicação do Pages.

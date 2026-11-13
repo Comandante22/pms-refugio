@@ -1,13 +1,12 @@
-# Publicação pendente
+# Status da publicação
 
-O GitHub recusou a criação de `Comandante22/pms-refugio`: `Resource not accessible by integration (createRepository)`. Não houve repositório criado, upload nem Pages ativado.
+O repositório público foi criado pelo agente do proprietário. O código já foi enviado para https://github.com/Comandante22/pms-refugio, branch main.
 
-## Para o agente autorizado
-1. Criar repositório `pms-refugio` na conta correta. Para Pages gratuito, normalmente o repositório precisa ser público; confirmar o plano se for privado.
-2. Enviar o conteúdo deste pacote para a branch `main`, mantendo `index.html`, `app.js`, `style.css` e `.nojekyll` na raiz. O código já está compilado: não precisa executar npm para publicar esses arquivos.
-3. Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
-4. Aguardar o deploy e conferir o endereço retornado pelo GitHub. O endereço esperado por convenção não comprova publicação; não apresentá-lo como ativo antes de testar.
-5. Abrir o endereço, carregar exemplos, criar reserva fictícia, recarregar, conferir persistência. Repetir em viewport de celular. Não há sincronização entre aparelhos.
-6. Não incluir .data, .env, senhas ou URLs iCal reais. Nenhuma dessas credenciais está neste pacote.
+A integração atual recusou a ativação do Pages com HTTP 403: Resource not accessible by integration (create-a-pages-site). Isso não impede o upload, que foi concluído.
 
-O outro agente poderá usar o ZIP completo ou somente os quatro arquivos de publicação para Pages. A fonte em src/ e os arquivos de build permitem continuar o desenvolvimento. Este é o segundo pacote enviado pelo proprietário, adaptado para Pages, separado do Bairro Papo e da Sabrina existentes.
+## Única etapa pendente
+Abrir https://github.com/Comandante22/pms-refugio/settings/pages com permissão de administrador. Selecionar Deploy from a branch → main → / (root), salvar e aguardar a implantação.
+
+Endereço esperado por convenção: https://comandante22.github.io/pms-refugio/. Confirmar HTTP 200 e testes da página antes de anunciar como ativo.
+
+Os quatro arquivos prontos estão na raiz: index.html, app.js, style.css, .nojekyll. Nenhuma compilação no GitHub é necessária. Nenhum segredo ou URL iCal real foi incluído.
