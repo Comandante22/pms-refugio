@@ -36,3 +36,12 @@ h1,h2{font-weight:700;letter-spacing:normal}header .logo a{text-decoration:none}
 @media(max-width:800px){header nav{order:3;width:100%;justify-content:space-between;gap:10px;flex-wrap:wrap}header nav a{font-size:12px;padding:4px 0}.hero-txt h1{font-size:34px}.legacy-models-callout{display:block}.legacy-models-callout .btn{margin-top:20px}.legacy-bia-bubble{right:98px;bottom:23px;width:195px;font-size:12px}.market .page-intro{padding:32px 20px 20px}.market .page-intro h1{font-size:30px}.market .page-intro .lede{font-size:14px}.market .section{padding:25px 20px 35px}.market .filters{padding:0 20px 20px}.market .section h2{font-size:28px}.market .form-top h2{font-size:27px}.market .model-info h2{font-size:27px}.market .button{padding:12px 16px;font-size:12px}.market .feature-grid h2{font-size:24px}}
 
 body.market{line-height:normal}.legacy-models-callout p{line-height:1.5}.market .fine-print{line-height:1.6}.market .lede{line-height:1.6}.market .ad-card p{line-height:1.5}
+/* Keep the floating conversation independent of the page section spacing. */
+section.bia-window{padding:0;gap:0;text-align:left;line-height:1.5}
+.bia-window>.bia-header,.bia-window>.bia-compose,.bia-window>.bia-quick,.bia-window>.bia-hint,.bia-window>.bia-status,.bia-window>.bia-error{flex-shrink:0;width:100%}
+.bia-window>.bia-messages{flex:1 1 300px;min-height:100px;width:100%}
+.bia-window .bia-identity{min-width:0;flex:1}
+.bia-window .bia-avatar{flex-shrink:0}
+.bia-window .bia-header>.icon-button{flex-shrink:0;margin-left:10px}
+.bia-window .bia-compose input{width:0;flex:1;min-width:0}
+@media(max-width:760px){section.bia-window{right:10px;bottom:96px;width:390px;max-width:calc(100vw - 20px);max-height:calc(100dvh - 110px)}.bia-window>.bia-messages{flex-basis:260px}}
