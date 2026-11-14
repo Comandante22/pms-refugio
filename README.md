@@ -21,4 +21,4 @@ Site: R$ 3.990 no Pix ou 12x de R$ 399 no cartão (total parcelado R$ 4.788). PM
 
 Frontend estático em GitHub Pages: index.html, bia.js e imagens. Endpoint: https://lightseagreen-kangaroo-398104.hostingersite.com/api/refugio. Código privado de integração do backend em /workspace/refugio-ia/backend, preservando o Zelador, DataJud e DJEN.
 
-Não adicionar credenciais ao repositório. O catálogo comercial da IA fica no backend: mudanças no HTML não atualizam automaticamente os valores informados pela Bia. Manter ambos consistentes. Não há canal comercial confirmado até o proprietário indicá-lo.
+Não adicionar credenciais ao repositório. O catálogo comercial da IA fica no backend: mudanças no HTML não atualizam automaticamente os valores informados pela Bia. Manter ambos consistentes. Contato comercial confirmado: OUTS Estúdio Web, WhatsApp (24) 99853-3753 — https://wa.me/5524998533753. O visitante abre o WhatsApp e envia a mensagem por conta própria.
