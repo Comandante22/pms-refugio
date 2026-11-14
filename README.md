@@ -1,32 +1,24 @@
-# PMS Refugio - GitHub Pages
+# Refúgio — PMS, sites e Bia
 
-## Subir em 2 minutos
-1. Crie repo no GitHub chamado `pms-refugio` (publico)
-2. Suba TODOS os arquivos desta pasta (index.html + *.webp)
-3. Settings > Pages > Branch: main > Folder: / (root) > Save
-4. Abra: https://SEU-USUARIO.github.io/pms-refugio/
+Site: https://comandante22.github.io/pms-refugio/
 
-## Comandos
-```bash
-git init
-git add .
-git commit -m "PMS Refugio - versao oficial"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/pms-refugio.git
-git push -u origin main
-# para atualizar depois:
-# git add . && git commit -m "atualizacao" && git push
-```
+A Bia consulta o OmniRoute por um backend HTTPS. A chave fica apenas no servidor. Visitantes não precisam colar uma chave de API.
 
-## OBSERVACOES - LEIA ANTES DE TESTAR
-1. GitHub Pages e ESTATICO: o site abre 100% (Hero Carrossel, calendario PMS, Bia lateral, calculadora, criador de sites).
-2. Nao funciona no GitHub Pages: salvar no banco do app. Aqui salva no navegador (localStorage) para teste. Para producao final, use versao com backend.
-3. NUNCA coloque chave de API real (Gemini/Groq/Mercado Pago) dentro do index.html. Chave no codigo = todo mundo ve. Use o campo dentro do site, que salva so no navegador.
-4. Pix real: use sua chave Pix do banco + link do Mercado Pago (R$ 3.990 em 12x). PMS recorrente: links de assinatura Mercado Pago (79/149/249).
-5. Teste no celular e no computador. Se o carrossel nao trocar, limpe cache Ctrl+Shift+R.
-6. Se as imagens nao aparecerem, confira que subiu os arquivos .webp junto com index.html, na mesma pasta.
+## Funcionalidades
 
-## Modelo oficial travado
-- Site: R$ 3.990 no Pix ou 12x de R$ 399 no Cartao. Paga 1 vez, e seu.
-- PMS: SOMENTE Cartao recorrente. Basico 79, Com Bia 149, Completo 249.
-- Sem Vrbo. So Airbnb + Booking + Site Direto. Sem comissao.
+- Atendimento sobre PMS, criação de sites, planos e condições comerciais divulgadas.
+- Histórico de cada conversa durante a página aberta; botão Nova conversa limpa esse contexto.
+- Criação de rascunho de conteúdo com IA a partir de nome da pousada e cidade.
+- Layout responsivo e carrossel de imagens.
+
+O calendário tem dados ilustrativos. O rascunho não publica sites nem ativa pagamentos; cadastro de hospedagens, disponibilidade real, cobrança, reservas e contratação dependem da implantação. Não envie cartão, documentos, senhas ou chaves no chat.
+
+## Condições publicadas
+
+Site: R$ 3.990 no Pix ou 12x de R$ 399 no cartão (total parcelado R$ 4.788). PMS mensal no cartão recorrente: Básico79, Com Bia149, Completo249. Combo: site + plano Com Bia149/mês. Confirmar condições da proposta e contrato com a equipe.
+
+## Arquitetura
+
+Frontend estático em GitHub Pages: index.html, bia.js e imagens. Endpoint: https://lightseagreen-kangaroo-398104.hostingersite.com/api/refugio. Código privado de integração do backend em /workspace/refugio-ia/backend, preservando o Zelador, DataJud e DJEN.
+
+Não adicionar credenciais ao repositório. O catálogo comercial da IA fica no backend: mudanças no HTML não atualizam automaticamente os valores informados pela Bia. Manter ambos consistentes. Não há canal comercial confirmado até o proprietário indicá-lo.
