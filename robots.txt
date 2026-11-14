@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://comandante22.github.io/pms-refugio/sitemap.xml
